@@ -29,7 +29,7 @@ input.onButtonPressed(Button.B, function () {
             `)
         basic.pause(1000)
         lightning_distance = lightning_timer * 340
-        basic.showString(" Thunder is ")
+        basic.showString(" Lightning is ")
         basic.showString("" + (lightning_distance))
         basic.showString(" metres away.")
         display_complete = 1
