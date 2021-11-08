@@ -1,6 +1,7 @@
 let a_button = 0
 let lightning_timer = 0
 let lightning_distance = 0
+let lightning_distance_kilometres = 0
 let display_complete = 0
 input.onButtonPressed(Button.A, function () {
     a_button += 1
@@ -32,13 +33,34 @@ input.onButtonPressed(Button.B, function () {
         basic.showString(" Lightning is ")
         basic.showString("" + (lightning_distance))
         basic.showString(" metres away.")
+        basic.showLeds(`
+            . . . # #
+            . . # # #
+            . # # # .
+            # # # . .
+            # # . . .
+            `)
+        lightning_distance_kilometres = lightning_distance / 1000
+        basic.showString(" Or: ")
+        basic.showString("" + (lightning_distance_kilometres))
+        basic.showString(" km away")
         display_complete = 1
     }
 })
 input.onGesture(Gesture.Shake, function () {
     if (display_complete == 1) {
-        basic.showString(" Thunder is ")
+        basic.showString(" Lightning is ")
         basic.showString("" + (lightning_distance))
         basic.showString(" metres away.")
+        basic.showLeds(`
+            . . . # #
+            . . # # #
+            . # # # .
+            # # # . .
+            # # . . .
+            `)
+        basic.showString(" Or: ")
+        basic.showString("" + (lightning_distance_kilometres))
+        basic.showString(" km away")
     }
 })
