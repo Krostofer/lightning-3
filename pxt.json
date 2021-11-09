@@ -5,7 +5,8 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "microbit-pxt-timeanddate": "github:bsiever/microbit-pxt-timeanddate#v2.0.24"
+        "microbit-pxt-timeanddate": "github:bsiever/microbit-pxt-timeanddate#v2.0.24",
+        "vl53l0x-distance": "github:tinkertanker/pxt-range-vl53l0x#220a5ff77963d636d9b880682f19d25c44065fa7"
     },
     "files": [
         "main.blocks",

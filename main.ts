@@ -33,6 +33,15 @@ input.onButtonPressed(Button.B, function () {
             `)
         basic.pause(1000)
         lightning_distance = lightning_timer * 340
+        if (lightning_distance < 2000) {
+            music.playMelody("C5 C5 C5 - - - - - ", 120)
+        }
+        if (lightning_distance > 2000 && lightning_distance < 3000) {
+            music.playMelody("G G G - - - - - ", 120)
+        }
+        if (lightning_distance > 4000) {
+            music.playMelody("C C C - - - - - ", 120)
+        }
         basic.showString(" Lightning is ")
         basic.showString("" + (lightning_distance))
         basic.showString(" metres away.")
