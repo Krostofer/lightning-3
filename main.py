@@ -37,6 +37,12 @@ def on_button_pressed_b():
         """)
         basic.pause(1000)
         lightning_distance = lightning_timer * 340
+        if lightning_distance < 2000:
+            music.play_melody("C5 C5 C5 - - - - - ", 120)
+        if lightning_distance > 2000 and lightning_distance < 3000:
+            music.play_melody("G G G - - - - - ", 120)
+        if lightning_distance > 4000:
+            music.play_melody("C C C - - - - - ", 120)
         basic.show_string(" Lightning is ")
         basic.show_string("" + str((lightning_distance)))
         basic.show_string(" metres away.")
@@ -72,7 +78,7 @@ def on_gesture_shake():
 input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 
 def on_microbit_id_button_a():
-    music.play_melody("C5 B A G F E D C ", 120)
+    music.play_melody("C - - - - - - - ", 120)
 control.on_event(EventBusSource.MICROBIT_ID_BUTTON_A,
     1,
     on_microbit_id_button_a)

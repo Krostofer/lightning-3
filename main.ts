@@ -15,7 +15,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     basic.showString("Press the A button when you see the lightning.")
     basic.showString("Press the B button when you see the thunder.")
-    basic.showString("Press A + B to repeat the lightning distance.")
+    basic.showString("Shake the micro:Bit to repeat the distance.")
 })
 input.onButtonPressed(Button.B, function () {
     music.stopAllSounds()
@@ -39,7 +39,7 @@ input.onButtonPressed(Button.B, function () {
         if (lightning_distance > 2000 && lightning_distance < 3000) {
             music.playMelody("G G G - - - - - ", 120)
         }
-        if (lightning_distance > 4000) {
+        if (lightning_distance > 3000) {
             music.playMelody("C C C - - - - - ", 120)
         }
         basic.showString(" Lightning is ")
