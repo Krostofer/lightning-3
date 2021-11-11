@@ -17,7 +17,7 @@ input.on_button_pressed(Button.A, on_button_pressed_a)
 def on_button_pressed_ab():
     basic.show_string("Press the A button when you see the lightning.")
     basic.show_string("Press the B button when you see the thunder.")
-    basic.show_string("Press A + B to repeat the lightning distance.")
+    basic.show_string("Shake the micro:Bit to repeat the distance.")
 input.on_button_pressed(Button.AB, on_button_pressed_ab)
 
 def on_button_pressed_b():
@@ -41,7 +41,7 @@ def on_button_pressed_b():
             music.play_melody("C5 C5 C5 - - - - - ", 120)
         if lightning_distance > 2000 and lightning_distance < 3000:
             music.play_melody("G G G - - - - - ", 120)
-        if lightning_distance > 4000:
+        if lightning_distance > 3000:
             music.play_melody("C C C - - - - - ", 120)
         basic.show_string(" Lightning is ")
         basic.show_string("" + str((lightning_distance)))
